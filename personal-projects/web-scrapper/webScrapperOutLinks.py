@@ -24,17 +24,17 @@ class LinkExtractorApp(QWidget):
         self.initUI()
 
     def initUI(self):
-        self.setWindowTitle('Link Extractor')
+        self.setWindowTitle('External Link Extractor') #widget title
 
-        self.layout = QVBoxLayout()
+        self.layout = QVBoxLayout() #creates a window vertical layout
 
-        self.url_input = QLineEdit(self)
-        self.url_input.setPlaceholderText('Digite a URL aqui')
-        self.layout.addWidget(self.url_input)
+        self.url_input = QLineEdit(self) #creates a input dialog to the user write
+        self.url_input.setPlaceholderText('Digite a URL aqui') #sets palceholder text
+        self.layout.addWidget(self.url_input) #adiciona a caixa de texto ao layouts
 
-        self.paste_button = QPushButton('Colar do Clipboard', self)
-        self.paste_button.clicked.connect(self.paste_from_clipboard)
-        self.layout.addWidget(self.paste_button)
+        self.paste_button = QPushButton('Colar do Clipboard', self) #creates a button with 'colar do clipboard message'
+        self.paste_button.clicked.connect(self.paste_from_clipboard) #conects the button with the function paste_from_clipboard
+        self.layout.addWidget(self.paste_button) #add button to layout
 
         self.extract_button = QPushButton('Extrair Links', self)
         self.extract_button.clicked.connect(self.extract_links)
