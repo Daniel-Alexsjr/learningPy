@@ -1,2 +1,2 @@
 Repository used to store small projects for testing libraries and katas for practing
-![ayundaRisuSleeping](https://github.com/user-attachments/assets/e845d3af-c455-444a-9478-0e7cf7cb0b1d)
+![ayundaRisuSleepingSmol](https://github.com/user-attachments/assets/f49593f1-293c-473a-ba8c-a753e36908b7)
