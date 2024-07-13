@@ -36,27 +36,27 @@ class LinkExtractorApp(QWidget):
         self.paste_button.clicked.connect(self.paste_from_clipboard) #conects the button with the function paste_from_clipboard
         self.layout.addWidget(self.paste_button) #add button to layout
 
-        self.extract_button = QPushButton('Extrair Links', self)
-        self.extract_button.clicked.connect(self.extract_links)
-        self.layout.addWidget(self.extract_button)
+        self.extract_button = QPushButton('Extrair Links', self) #creates a button with 'extrair links' str
+        self.extract_button.clicked.connect(self.extract_links) #conects button click with the function 'extract_links"
+        self.layout.addWidget(self.extract_button) #add button to layour
 
-        self.setLayout(self.layout)
+        self.setLayout(self.layout) #sets vertical layout to main window
 
     def paste_from_clipboard(self):
-        clipboard = QApplication.clipboard()
-        self.url_input.setText(clipboard.text())
+        clipboard = QApplication.clipboard() #gets the clipboard content
+        self.url_input.setText(clipboard.text()) #defines the input box text to the clipboard
 
     def extract_links(self):
-        site_link = self.url_input.text()
+        site_link = self.url_input.text() #receives the text that the user input
         if site_link:
             for i, item in enumerate(extract_all_links(site_link), start=1):
-                print(f"{i}. {item}")
+                print(f"{i}. {item}") #displays the content enumarated and in order
 
 def main():
-    app = QApplication(sys.argv)
-    ex = LinkExtractorApp()
-    ex.show()
-    sys.exit(app.exec_())
+    app = QApplication(sys.argv) #essential for pyqt5 aplication
+    ex = LinkExtractorApp() #creates an instance LinkExtractorApp
+    ex.show() #shows the instance
+    sys.exit(app.exec_()) #start app event loop and ant stop it when closed
 
 if __name__ == "__main__":
     main()
