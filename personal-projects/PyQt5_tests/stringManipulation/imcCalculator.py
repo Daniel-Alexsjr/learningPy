@@ -28,12 +28,12 @@ class MainWindow(QMainWindow):
         self.heightReceiver.setPlaceholderText("height (m)")
         layout.addWidget(self.heightReceiver)
 
-        # Button to reverse string
+        # Button to call the function calculate_and_display
         calculate_button = QPushButton("calculate IMC")
         calculate_button.clicked.connect(self.calculate_and_display)
         layout.addWidget(calculate_button)
 
-        # Label to display reversed string
+        # Label to display
         self.result_label = QLabel("")
         layout.addWidget(self.result_label)
 
@@ -57,3 +57,4 @@ app = QApplication(sys.argv)
 window = MainWindow()
 window.show()
 app.exec()
+ 
