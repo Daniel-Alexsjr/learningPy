@@ -1,0 +1,14 @@
+[
+    {
+        "task": "practice machine learning",
+        "done": false
+    },
+    {
+        "task": "defeat bloons boss",
+        "done": false
+    },
+    {
+        "task": "work",
+        "done": true
+    }
+]
